@@ -20,7 +20,7 @@ const personalData = ref('');
 
 onMounted(() => {
   EventBus.on('show-personal-data', () => {
-    personalData.value = 'Jan Kowalski'; // Replace with actual name
+    personalData.value = 'Dawid Zalewski';
   });
 
   EventBus.on('reset-settings', () => {
@@ -39,7 +39,7 @@ onMounted(() => {
   width: 100%;
   height: 110px;
   background: black;
-  color: #fff;
+  color: $main-text;
   display: flex;
   align-items: center;
   padding: 16px 50px;
@@ -57,7 +57,7 @@ onMounted(() => {
         @include transition(background-color, .5s);
         svg {
           display: block;
-          color: white;
+          color: $main-text;
           height: 3.5em;
           width: 3.5em;
         }
