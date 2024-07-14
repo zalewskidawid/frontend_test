@@ -60,3 +60,19 @@ input[type="radio"] {
         }
     }
 }
+
+//Mobile responsive
+
+@include breakpoint(md) {
+    p.title {
+        margin-bottom: 32px;
+    }
+    input[type="radio"] {
+        padding: 0.81em;
+        margin-right: 1.4em;
+        &::before {
+            left: 3.5px;
+            top: 3.5px;
+        }
+    }
+}

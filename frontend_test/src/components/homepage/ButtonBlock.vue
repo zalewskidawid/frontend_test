@@ -25,7 +25,7 @@ function appendContent() {
 
 .button-block-wrapper {
     text-align: center;
-    flex: 0 0 33.3333%;
+    flex: 1 0 33.3333%;
     .button-block-container {
         &__btn {
             cursor: pointer;
@@ -47,4 +47,40 @@ function appendContent() {
         }
     }
 }
+
+// Mobile responsive
+
+@include breakpoint(lg) {
+    .button-block-wrapper {
+        &__title {
+            text-align: end;
+        }
+        .button-block-container {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            &__btn {
+                max-width: 180px;
+                &:first-child {
+                    margin-bottom: 2em;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(xs) {
+    .button-block-wrapper {
+        flex: 1 1 100%;
+        margin-top: 58px;
+        &__title {
+            text-align: start;
+        }
+        .button-block-container {
+            align-items: start;
+        }
+    }
+}
+
 </style>

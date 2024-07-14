@@ -124,4 +124,27 @@ onMounted(() => {
         }
     }
 }
+
+@include breakpoint(xl) {
+    .content-block-wrapper {
+        flex: 1 1 50%;
+        margin-top: 58px;
+    }
+}
+
+@include breakpoint(md) {
+    .content-block-wrapper {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+@include breakpoint(xs) {
+    .content-block-wrapper {
+        &__title {
+            font-size: 1em;
+            width: 100%;
+        }
+    }
+}
 </style>

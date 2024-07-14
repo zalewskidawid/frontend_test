@@ -51,6 +51,7 @@ onMounted(() => {
     position: relative;
       &__logo {
         padding:12px;
+        margin-right: 16px;
         border-radius: 50%;
         display: block;
         background-color: #303030;
@@ -86,6 +87,24 @@ onMounted(() => {
         &__text, &__fullname {
           font-size: 1.4em;
       }
+      &__text {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        b {
+          padding-left: 4px;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(xs) {
+  .header-wrapper {
+    .header-text-container {
+        &__text, &__fullname {
+          font-size: 1.1em;
+        }
     }
   }
 }

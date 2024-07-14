@@ -54,4 +54,18 @@
         width:100%;
     }
 }
+
+// Mobile responsive
+
+@include breakpoint(md) {
+    .main-content-wrapper {
+        padding: 28px 20px 36px 20px;
+        hr {
+            margin-bottom: 65px;
+        }
+        &__headline {
+            font-size: 1.8em;
+        }
+    }
+}
 </style>

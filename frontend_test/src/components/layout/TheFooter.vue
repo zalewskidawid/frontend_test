@@ -260,4 +260,14 @@ footer.rotate-active {
         }
     }
 }
+
+@include breakpoint(xs) {
+    footer {
+        .footer-container-option {
+            &__btn {
+                padding: 0.6em 2.6em;
+            }
+        }
+    }
+}
 </style>

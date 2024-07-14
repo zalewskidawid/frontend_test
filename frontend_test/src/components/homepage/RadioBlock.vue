@@ -29,7 +29,7 @@ EventBus.on('reset-settings', () => {
 
 .options-block-wrapper {
     text-align: center;
-    flex: 0 0 33.3333%;
+    flex: 1 0 33.3333%;
     .options-container {
         display: flex;
         align-items: flex-start;
@@ -46,6 +46,27 @@ EventBus.on('reset-settings', () => {
                 margin-bottom: 0;
             }
         }
+    }
+}
+
+//Media responsive
+
+@include breakpoint(md) {
+    .options-block-wrapper {
+        &__text {
+            text-align: start;
+        }
+        .options-container {
+            label {
+                margin-bottom: 22px;
+            }
+        }
+    }
+}
+
+@include breakpoint(xs) {
+    .options-block-wrapper {
+        flex: 1 1 100%;
     }
 }
 

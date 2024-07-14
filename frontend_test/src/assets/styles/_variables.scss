@@ -1,16 +1,28 @@
 $primary-color: #e68305;
 $light-gray: #2b2c30;
-$lighten-gray: #74767d;
+$lighten-gray: #a7abb6;
 $main-text: #fff;
 
 // responsive Breakpoints
 $breakpoints: (
+    xs: (
+        min: 450px,
+        max: 450px
+    ),
     sm: (
         min: 576px,
-        max: 575.98px,
+        max: 575.98px
     ),
     md: (
         min: 768px,
         max: 767.98px
+    ),
+    lg: (
+        min: 992px,
+        max: 991.98px
+    ),
+    xl: (
+        min: 1400px,
+        max: 1399.98px
     ),
 );
