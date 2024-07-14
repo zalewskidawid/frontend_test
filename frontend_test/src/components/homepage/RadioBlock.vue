@@ -10,17 +10,28 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue';
+import { ref, watch, onMounted } from 'vue';
 import { EventBus } from '@/utils/EventBus.js';
 
 const selectedOption = ref(null);
 
+onMounted(() => {
+  const savedOption = localStorage.getItem('selectedOption');
+  if (savedOption) {
+    selectedOption.value = savedOption;
+  }
+});
+
 watch(selectedOption, (newValue) => {
-    EventBus.emit('optionSelected', newValue);
+  EventBus.emit('optionSelected', newValue);
+  if (newValue) {
+    localStorage.setItem('selectedOption', newValue);
+  }
 });
 
 EventBus.on('reset-settings', () => {
-    selectedOption.value = null;
+  selectedOption.value = null;
+  localStorage.removeItem('selectedOption');
 });
 </script>
 
