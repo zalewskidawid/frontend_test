@@ -32,8 +32,9 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: calc(100vh - 230px);
+    min-height: calc(100vh - 230px);
     width:100%;
+    background-color: #2a2d36;
     &__headline {
         color: $main-text;
         font-weight: normal;
@@ -47,7 +48,7 @@
     .main-content-container {
         display: flex;
         align-items: flex-start;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-direction: row;
         flex-wrap: wrap;
         width:100%;

@@ -67,7 +67,7 @@ function endAnimation() {
 @import "../../assets/styles/main.scss";
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: 120px;
@@ -231,5 +231,33 @@ footer.rotate-active {
     transform: translateY(0);
     opacity: 1;
     pointer-events: all;
+}
+
+//Mobile Responsive
+
+@include breakpoint(md) {
+    footer {
+        padding: 16px 20px 16px 25px;
+        .footer-container-company {
+            display: none;
+        }
+        .footer-container-options-panel {
+            right: 20px;
+        }
+    }
+}
+
+@include breakpoint(sm) {
+    footer {
+        .footer-container-options-panel {
+            right: 20px;
+            width: 195px;
+        }  
+        .footer-container-option {
+            &__btn {
+                padding: 0.6em 4.2em;
+            }
+        }
+    }
 }
 </style>

@@ -101,7 +101,12 @@ onMounted(() => {
 @import "../../assets/styles/main.scss";
 
 .content-block-wrapper {
-    flex: 0 0 33.3333%;
+    flex: 1 1 33.3333%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
     &__title {
         white-space: nowrap;
         overflow: hidden;
@@ -115,6 +120,7 @@ onMounted(() => {
         &__text {
             color: $lighten-gray;
             font-size: 1em;
+            text-align: center;
         }
     }
 }

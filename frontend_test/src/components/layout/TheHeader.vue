@@ -7,7 +7,7 @@
     </div>
     <div class="header-text-container">
       <p class="header-text-container__text">Zadanie <b>rekrutacyjne</b></p>
-      <div v-if="personalData">{{ personalData }}</div>
+      <div class="header-text-container__fullname" v-if="personalData">{{ personalData }}</div>
     </div>
   </header>
 </template>
@@ -46,6 +46,7 @@ onMounted(() => {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  z-index: 100;
   .header-logo-container {
     position: relative;
       &__logo {
@@ -68,6 +69,23 @@ onMounted(() => {
   .header-text-container {
     &__text {
       font-size: 1.8em;
+    }
+    &__fullname {
+      text-align: end;
+      font-size: 1.8em;
+    }
+  }
+}
+
+//Mobile responsive
+
+@include breakpoint(md) {
+  .header-wrapper {
+    padding: 20px 16px;
+      .header-text-container {
+        &__text, &__fullname {
+          font-size: 1.4em;
+      }
     }
   }
 }
