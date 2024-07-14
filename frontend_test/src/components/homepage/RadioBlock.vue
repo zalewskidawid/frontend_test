@@ -1,6 +1,6 @@
 <template>
-    <div class="first-block-wrapper">
-        <p class="first-block-wrapper__text title">BLOK PIERWSZY</p>
+    <div class="options-block-wrapper">
+        <p class="options-block-wrapper__text title">BLOK PIERWSZY</p>
         <div class="options-container">
             <label><input type="radio" v-model="selectedOption" value="1" class="options-container__option"> Opcja pierwsza</label>
             <label><input type="radio" v-model="selectedOption" value="2" class="options-container__option"> Opcja druga</label>
@@ -25,24 +25,16 @@ EventBus.on('reset-settings', () => {
 </script>
 
 <style scoped lang="scss">
-@import "../../assets/styles/variables.scss";
-@import "../../assets/styles/mixins.scss";
+@import "../../assets/styles/main.scss";
 
-.first-block-wrapper {
-    width: 100%;
+.options-block-wrapper {
     text-align: center;
-    &__text {
-        color: $main-text;
-        margin-bottom: 66px;
-    }
+    flex: 0 0 33.3333%;
     .options-container {
         display: flex;
         align-items: flex-start;
         justify-content: center;
         flex-direction: column;
-        &:nth-last-child(n) {
-            margin-bottom: 0;
-        }
         label {
             display: flex;
             align-items: center;
@@ -50,6 +42,9 @@ EventBus.on('reset-settings', () => {
             margin-bottom: 20px;
             color: $main-text;
             font-weight: 200;
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 }

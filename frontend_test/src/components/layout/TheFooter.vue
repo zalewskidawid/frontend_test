@@ -64,8 +64,7 @@ function endAnimation() {
 </script>
 
 <style scoped lang="scss">
-@import "../../assets/styles/variables.scss";
-@import "../../assets/styles/mixins.scss";
+@import "../../assets/styles/main.scss";
 
 footer {
     position: absolute;

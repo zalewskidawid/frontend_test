@@ -1,6 +1,8 @@
 @import './mixins.scss';
 @import './variables.scss';
 
+//Global Styles
+
 * {
     box-sizing: border-box;
     margin:0;
@@ -21,7 +23,11 @@ p {
 }
 p.title {
     font-weight: 600;
+    margin-bottom: 66px;
+    color: $main-text;
 }
+
+//Form styles
 
 input[type="radio"] {
     position: relative;
