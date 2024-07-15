@@ -4,9 +4,9 @@
             BLOK Z DŁUGĄ NAZWĄ KTÓRA SAMA SIĘ PRZYTNIE LOREM IPSUM LOREM IPSUM
         </p>
         <div class="content-block-container">
-            <p v-for="(text, index) in displayedContent" :key="index" class="content-block-container__text">
-            {{ text }}
-            </p>
+            <article v-for="(text, index) in displayedContent" :key="index" class="content-block-container__text">
+            <p>{{ text }}</p>
+            </article>
         </div>
         <Modal />
     </div>
