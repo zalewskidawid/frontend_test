@@ -263,6 +263,10 @@ footer.rotate-active {
 
 @include breakpoint(xs) {
     footer {
+        .footer-container-options-panel {
+            right: 0;
+            width: 100%;
+        }
         .footer-container-option {
             &__btn {
                 padding: 0.6em 2.6em;

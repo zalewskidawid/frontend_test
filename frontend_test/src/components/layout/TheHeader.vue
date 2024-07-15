@@ -17,14 +17,27 @@ import { ref, onMounted } from 'vue';
 import { EventBus } from '@/utils/EventBus.js';
 
 const personalData = ref('');
+const localStoragePersonalDataKey = 'personalData';
+
+function savePersonalDataToLocalStorage() {
+  localStorage.setItem(localStoragePersonalDataKey, personalData.value);
+}
+
+function getPersonalDataFromLocalStorage() {
+  return localStorage.getItem(localStoragePersonalDataKey) || '';
+}
 
 onMounted(() => {
+  personalData.value = getPersonalDataFromLocalStorage();
+
   EventBus.on('show-personal-data', () => {
-    personalData.value = 'Dawid Zalewski';
+    personalData.value = 'Jan Kowalski';
+    savePersonalDataToLocalStorage();
   });
 
   EventBus.on('reset-settings', () => {
     personalData.value = '';
+    localStorage.removeItem(localStoragePersonalDataKey);
   });
 });
 </script>
