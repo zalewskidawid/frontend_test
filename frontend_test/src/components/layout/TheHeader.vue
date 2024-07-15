@@ -31,7 +31,7 @@ onMounted(() => {
   personalData.value = getPersonalDataFromLocalStorage();
 
   EventBus.on('show-personal-data', () => {
-    personalData.value = 'Jan Kowalski';
+    personalData.value = 'Dawid Zalewski';
     savePersonalDataToLocalStorage();
   });
 
